@@ -4,26 +4,13 @@ import Card from './components/Card.jsx';
 import data from './data.jsx';
 
 const App = () => {
-  // <Hero />;
   const cards = data.map((item) => {
-    const { title, price, coverImg, location, stats, id, openSpots } = item;
-
-    return (
-      <Card
-        title={title}
-        price={price}
-        coverImg={coverImg}
-        location={location}
-        rating={stats.rating}
-        reviewCount={stats.reviewCount}
-        key={id}
-        openSpots={openSpots}
-      />
-    );
+    return <Card key={item.id} {...item} />;
   });
   return (
     <div>
       <Navbar />
+      <Hero />
       <section className="cards-list">{cards}</section>
     </div>
   );

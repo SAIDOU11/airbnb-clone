@@ -45,6 +45,7 @@ section {
 
 /* Card */
 .cards-list {
+  padding-top: 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
