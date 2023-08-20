@@ -6,7 +6,8 @@ import data from './data.jsx';
 const App = () => {
   // <Hero />;
   const cards = data.map((item) => {
-    const { title, price, coverImg, location, stats, id } = item;
+    const { title, price, coverImg, location, stats, id, openSpots } = item;
+
     return (
       <Card
         title={title}
@@ -16,13 +17,14 @@ const App = () => {
         rating={stats.rating}
         reviewCount={stats.reviewCount}
         key={id}
+        openSpots={openSpots}
       />
     );
   });
   return (
     <div>
       <Navbar />
-      {cards}
+      <section className="cards-list">{cards}</section>
     </div>
   );
 };

@@ -44,17 +44,25 @@ section {
 }
 
 /* Card */
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
 .card {
+  position: relative;
   margin-top: 1em;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
-  width: 200px;
+  font-size: 0.85rem;
+  width: 175px;
 }
 
 .card .card-profil {
   width: 100%;
   border-radius: 0.8em;
-  height: 235px;
 }
 
 .card-rates {
@@ -75,4 +83,14 @@ section {
 .card p span {
   color: black;
   font-weight: bold;
+}
+
+.card-badge {
+  position: absolute;
+  background-color: #fff;
+  font-weight: bold;
+  top: 0.4em;
+  left: 0.4em;
+  padding: 0.25em;
+  border-radius: 0.25em;
 }
